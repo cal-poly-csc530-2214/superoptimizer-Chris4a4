@@ -57,7 +57,7 @@ Although runtime began to become prohibitive for longer and longer programs, I w
 
 ![results](https://github.com/cal-poly-csc530-2214/superoptimizer-Chris4a4/blob/main/Multiplication%20Constant%20vs%20Instructions%20Required.png?raw=true)
 
-This more or less matches Massalin's work. The periodic nature of this data is very cool to me, and it's very easy to see the patterns in program length. I suspect that these trends would continue for larger val ues. This is definitely more precise than Massalin's conclusion, as the difficulty in representing larger numbers clearly comes from their distance from a power of two, not from their raw size.
+This more or less matches Massalin's work. The periodic nature of this data is very cool to me, and it's very easy to see the patterns in program length. I suspect that these trends would continue for larger values. This is definitely more precise than Massalin's conclusion, as the difficulty in representing larger numbers clearly comes from their distance from a power of two, not from their raw size.
 
 ## Further Work
 
