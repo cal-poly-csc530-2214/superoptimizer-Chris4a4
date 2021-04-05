@@ -57,17 +57,16 @@ Although runtime began to become prohibitive for longer and longer programs, I w
 
 ![results](https://github.com/cal-poly-csc530-2214/superoptimizer-Chris4a4/blob/main/Multiplication%20Constant%20vs%20Instructions%20Required.png?raw=true)
 
-This more or less matches Massalin's work. The periodic nature of this data is very cool to me, and it's very easy to see the patterns in program length. I suspect that these trends would continue for larger val
-ues. This is definitely more precise than Massalin's conclusion, as the difficulty in representing larger numbers clearly comes from their distance from a power of 2, not from their raw size.
+This more or less matches Massalin's work. The periodic nature of this data is very cool to me, and it's very easy to see the patterns in program length. I suspect that these trends would continue for larger val ues. This is definitely more precise than Massalin's conclusion, as the difficulty in representing larger numbers clearly comes from their distance from a power of two, not from their raw size.
 
 ## Further Work
 
 If I had more time, the next thing I would have implemented are several search-space optimizations. There's a LOT of ways to improve on this approach, and they all seem pretty interesting to me:
 
 1. Lookup table-based redundant sequence purning ala Massalin. This optimization could also be done in the opposite way; lookup valid next instructions based on one or more previous ones. Although this is an excellent optimization, it makes the search space a lot more complex than just a simple pow(possible instructions, program_length) brute-force iteration. Generating this table automatically seems like a really interesting and fun problem and I would have liked to tackle it given more time.
-2. First instruction must use d0, last instruction must modify d0. Although these do get rid of valid programs, any removed programs were either not optimal OR a rewording of an optimal program.
+2. First instruction must use ``d0``, last instruction must modify ``d0``. Although these do get rid of valid programs, any removed programs were either not optimal OR a rewording of an optimal program.
 3. More intelligent search. This didn't seem appropriate, as the purpose of this assigment was to investigate a brute-force type approach to program generation.
-4. Caching instruction results as a program is being built. For example, the result of the initial instruction move d0, d1 should be cached so that any program built off of this starting instruction won't need to run the instruction itself. Likewise, this can be applied to other instructions and even combinations of instructions to greatly save on execution time.
+4. Caching instruction results as a program is being built. For example, the result of the initial instruction ``move d0, d1`` should be cached so that any program built off of this starting instruction won't need to run the instruction itself. Likewise, this can be applied to other instructions and even combinations of instructions to greatly save on execution time.
 
 ## Questions
 
